@@ -2,9 +2,18 @@ header {
   --nav-pages-color: rgb(34, 34, 34);
 }
 
+.header-nav__pages {
+}
+
+.header-nav__pages nav {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
 .header-nav__pages ul {
   display: flex;
   justify-content: flex-end;
+  gap: 0.5rem;
   padding-bottom: 0;
 }
 
@@ -19,7 +28,6 @@ header {
   text-decoration: none;
   color: var(--nav-pages-color);
   font-size: 0.95rem;
-  margin-right: 0.5rem;
 }
 
 .header-nav__pages a img {
@@ -30,8 +38,15 @@ header {
 }
 
 .header-nav__main {
+  display: flex;
   background: black;
-  padding: 1.5rem 15px 0rem 15px;
+  padding: 8px 15px 0rem 15px;
+}
+
+.header-nav__main--wrapper {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .header-nav__main a {
@@ -86,19 +101,20 @@ header {
 
 .header-nav__main nav {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   height: 52px;
-  margin-top: 2px;
+  margin-top: 18px;
   & ul {
-    width: 100%;
+    width: 60%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    gap: 20px;
-    padding-top: 0.5rem;
-    padding-left: 0rem;
-    font-size: 1.05rem;
+    gap: 32px;
+    padding: 0.5rem 0 15px 32px;
+
+    font-size: 20.2px;
     & li {
+      padding-bottom: 4px;
       border-bottom: 4px solid;
       border-bottom-color: transparent;
       transition: border-bottom-color 0.3s ease-in-out;
@@ -109,6 +125,12 @@ header {
   }
 }
 
-.header-nav__main nav div {
-  height: 52px;
+.header-nav__main--logo {
+  width: 258px;
+  height: 75px;
+}
+
+.header-nav__main--logo img {
+  width: 100%;
+  height: 100%;
 }
