@@ -1,33 +1,114 @@
-header nav ul {
-  display: flex;
-  justify-content: flex-end;
+header {
+  --nav-pages-color: rgb(34, 34, 34);
 }
 
-.header__pages-navigation li {
+.header-nav__pages ul {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 0;
+}
+
+.header-nav__pages li {
   list-style: none;
   padding: 10px;
   color: white;
   text-align: center;
 }
 
-.header__pages-navigation ul {
-  margin-top: 0;
-}
-
-.header__pages-navigation li a {
+.header-nav__pages li a {
   text-decoration: none;
-  color: black;
-  font-size: 1rem;
-  font-weight: 400;
+  color: var(--nav-pages-color);
+  font-size: 0.95rem;
   margin-right: 0.5rem;
 }
 
-.header__pages-navigation a img {
+.header-nav__pages a img {
   width: 1.4rem;
   height: 1.4rem;
   margin-right: 0.2rem;
   margin-bottom: -5px;
 }
 
-.header__main-navigation {
+.header-nav__main {
+  background: black;
+  padding: 1.5rem 15px 0rem 15px;
+}
+
+.header-nav__main a {
+  color: white;
+}
+
+.header-nav__main-search {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.header-nav__main-search--input {
+  display: flex;
+
+  & form {
+    & input {
+      background: black;
+      border: none;
+      width: 50px;
+    }
+
+    & input::placeholder {
+      color: white;
+      font-size: 0.95rem;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.header-nav__light--dropdown {
+  background: black;
+  color: white;
+  display: flex;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.header-nav__light--triangle {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-bottom: 6px solid white;
+  margin-left: 0.3rem;
+  margin-top: 0.5rem;
+  rotate: 180deg;
+}
+
+.header-nav__main nav {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  margin-top: 2px;
+  & ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding-top: 0.5rem;
+    padding-left: 0rem;
+    font-size: 1.05rem;
+    & li {
+      border-bottom: 4px solid;
+      border-bottom-color: transparent;
+      transition: border-bottom-color 0.3s ease-in-out;
+      &:hover {
+        border-bottom-color: red;
+      }
+    }
+  }
+}
+
+.header-nav__main nav div {
+  height: 52px;
 }
