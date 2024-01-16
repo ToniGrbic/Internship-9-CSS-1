@@ -1,8 +1,8 @@
 header {
   --nav-pages-color: rgb(34, 34, 34);
-}
-
-.header-nav__pages {
+  --nav-main-background: rgb(35, 0, 27);
+  --nav-main-light-hover: rgb(207, 207, 207);
+  --link-hover-red: rgb(255, 14, 80);
 }
 
 .header-nav__pages nav {
@@ -20,7 +20,7 @@ header {
 .header-nav__pages li {
   list-style: none;
   padding: 10px;
-  color: white;
+  color: rgb(213, 213, 213);
   text-align: center;
 }
 
@@ -28,6 +28,10 @@ header {
   text-decoration: none;
   color: var(--nav-pages-color);
   font-size: 0.95rem;
+}
+
+.header-nav__pages li a:hover {
+  color: var(--link-hover-red);
 }
 
 .header-nav__pages a img {
@@ -39,7 +43,7 @@ header {
 
 .header-nav__main {
   display: flex;
-  background: black;
+  background: var(--nav-main-background);
   padding: 8px 15px 0rem 15px;
 }
 
@@ -63,10 +67,15 @@ header {
   display: flex;
 
   & form {
+    height: 20px;
+    display: flex;
+    align-items: end;
+
     & input {
       background: black;
       border: none;
       width: 50px;
+      cursor: pointer;
     }
 
     & input::placeholder {
@@ -78,8 +87,18 @@ header {
     cursor: pointer;
   }
 }
+.header-nav__light--dropdown-btn span {
+  margin-left: 5px;
+}
+.header-nav__light--dropdown-btn:hover span {
+  color: var(--nav-main-light-hover);
+}
 
-.header-nav__light--dropdown {
+.header-nav__light--dropdown-btn:hover div.header-nav__light--triangle {
+  border-bottom-color: var(--nav-main-light-hover);
+}
+
+.header-nav__light--dropdown-btn {
   background: black;
   color: white;
   display: flex;
@@ -111,15 +130,15 @@ header {
     align-items: center;
     gap: 32px;
     padding: 0.5rem 0 15px 32px;
-
     font-size: 20.2px;
+
     & li {
       padding-bottom: 4px;
       border-bottom: 4px solid;
       border-bottom-color: transparent;
-      transition: border-bottom-color 0.3s ease-in-out;
+      transition: border-bottom-color 0.2s ease-in-out;
       &:hover {
-        border-bottom-color: red;
+        border-bottom-color: var(--link-hover-red);
       }
     }
   }
