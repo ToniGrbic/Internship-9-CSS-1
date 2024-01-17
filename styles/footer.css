@@ -1,6 +1,9 @@
 footer {
   --footer-main-background-color: rgb(44, 0, 34);
   --footer-legal-background-color: rgb(35, 0, 27);
+  --footer-icons-background-color: #56334e;
+  --footer-icons-hover-text-color: #e8e4e7;
+  --footer-icons-hover-background-color: #d0d0d0;
 
   color: #fff;
   text-align: center;
@@ -61,22 +64,31 @@ div.footer__main {
 .footer__social-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
   width: 100%;
+  column-gap: 15px;
+  row-gap: 5px;
+  & div {
+    display: inline-block;
+  }
   & svg {
     margin-right: 8px;
-    fill: #56334e;
+    fill: var(--footer-icons-background-color);
     background-color: white;
     z-index: -1;
     border-radius: 50%;
     border-color: transparent;
     & circle {
-      fill: #56334e;
+      fill: var(--footer-icons-background-color);
     }
   }
 }
 
-.footer__social-link {
+.footer__social-link:hover div {
+  color: var(--footer-icons-hover-text-color);
+}
+
+.footer__social-link:hover svg {
+  background-color: var(--footer-icons-hover-background-color);
 }
 
 .footer__legal {
