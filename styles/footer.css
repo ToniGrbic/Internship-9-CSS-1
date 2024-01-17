@@ -26,6 +26,7 @@ div.footer__main {
   display: grid;
   grid-template-columns: 208px 208px 208px 635px;
   justify-content: center;
+  height: 315px;
 }
 
 .footer__links {
