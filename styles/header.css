@@ -5,6 +5,7 @@ header {
   --link-hover-red: rgb(255, 14, 80);
 }
 
+.header-nav__main--wrapper,
 .header-nav__pages nav {
   width: 100%;
   max-width: 1300px;
@@ -47,12 +48,6 @@ header {
   padding: 8px 15px 0rem 15px;
 }
 
-.header-nav__main--wrapper {
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
 .header-nav__main a {
   color: white;
 }
@@ -60,7 +55,7 @@ header {
 .header-nav__main-search {
   display: flex;
   justify-content: flex-end;
-  gap: 2rem;
+  gap: 0.5rem;
 }
 
 .header-nav__main-search--input {
@@ -124,16 +119,17 @@ header {
   height: 52px;
   margin-top: 18px;
   & ul {
-    width: 60%;
+    width: 70%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 32px;
-    padding: 0.5rem 0 15px 32px;
+    padding: 0.5rem 0 15px 0px;
+
     font-size: 20.2px;
 
     & li {
-      padding-bottom: 4px;
+      padding: 0 5px 4px 5px;
+      margin-left: 9.8px;
       border-bottom: 4px solid;
       border-bottom-color: transparent;
       transition: border-bottom-color 0.2s ease-in-out;
@@ -146,10 +142,65 @@ header {
 
 .header-nav__main--logo {
   width: 258px;
-  height: 75px;
+  height: 80px;
 }
 
 .header-nav__main--logo img {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 1422px) {
+  .header-nav__main--wrapper,
+  .header-nav__pages nav {
+    max-width: 1000px;
+  }
+
+  .header-nav__main--logo {
+    width: 240px;
+    height: 73px;
+  }
+
+  .header-nav__main nav ul {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header-nav__main--logo {
+    width: calc(148px + 5.5vw);
+    height: calc(44px + 1vw);
+  }
+
+  .header-nav__main nav ul {
+    font-size: 1.95vw;
+    width: 90%;
+
+    & li {
+      padding: 0 4px 4px 4px;
+      margin-left: calc(6px + 0.25vw);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav__pages,
+  .header-nav__main-search,
+  .header-nav__main nav ul {
+    display: none;
+  }
+
+  .header-nav__main {
+    height: 50px;
+  }
+
+  .header-nav__main--logo {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 124px;
+    height: 38px;
+  }
 }
