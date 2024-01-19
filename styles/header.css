@@ -4,7 +4,9 @@ header {
   --nav-main-light-hover: rgb(207, 207, 207);
   --link-hover-red: rgb(255, 14, 80);
 }
-
+.header-nav__mobile--wrapper {
+  display: none;
+}
 .header-nav__main--wrapper,
 .header-nav__pages nav {
   width: 100%;
@@ -184,6 +186,42 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+  .header-nav__mobile--wrapper {
+    display: flex;
+    margin-bottom: 15px;
+    color: white;
+    align-items: center;
+    & :hover {
+      cursor: pointer;
+    }
+
+    & span {
+      font-size: 17px;
+    }
+  }
+
+  .header-nav__hamburger-icon {
+    width: 18px;
+    height: 26px;
+    margin-left: 9px;
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .header-nav__mobile--wrapper:hover .header-nav__hamburger-icon > svg {
+    fill: white;
+  }
+
+  .header-nav__main {
+    padding-top: 0;
+  }
+
+  .header-nav__main nav {
+    margin-top: 0;
+    padding-top: 0;
+  }
   .header-nav__pages,
   .header-nav__main-search,
   .header-nav__main nav ul {
@@ -196,11 +234,11 @@ header {
 
   .header-nav__main--logo {
     position: absolute;
-    top: 40px;
+    top: 31px;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 124px;
+    width: 128px;
     height: 38px;
   }
 }
