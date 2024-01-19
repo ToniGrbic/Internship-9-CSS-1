@@ -58,6 +58,7 @@ header {
   display: flex;
   justify-content: flex-end;
   gap: 0.5rem;
+  padding-top: 10px;
 }
 
 .header-nav__main-search--input {
@@ -100,6 +101,7 @@ header {
   color: white;
   display: flex;
   border: none;
+  padding-right: 0;
   font-size: 0.95rem;
 }
 
@@ -119,13 +121,13 @@ header {
   display: flex;
   align-items: flex-end;
   height: 52px;
-  margin-top: 18px;
+  margin-top: 9px;
   & ul {
     width: 70%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0.5rem 0 15px 0px;
+    padding: 0.5rem 0 0.5rem 0px;
 
     font-size: 20.2px;
 
