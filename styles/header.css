@@ -1,7 +1,8 @@
 header {
   --nav-pages-color: rgb(34, 34, 34);
   --nav-main-background: rgb(35, 0, 27);
-  --nav-main-light-hover: rgb(207, 207, 207);
+  --nav-main-light-hover: rgb(180, 180, 180);
+  --nav-main-light-icon-hover: rgb(141, 141, 141);
   --link-hover-red: rgb(255, 14, 80);
 }
 .header-nav__mobile--wrapper {
@@ -92,10 +93,6 @@ header {
   color: var(--nav-main-light-hover);
 }
 
-.header-nav__light--dropdown-btn:hover div.header-nav__light--triangle {
-  border-bottom-color: var(--nav-main-light-hover);
-}
-
 .header-nav__light--dropdown-btn {
   background: black;
   color: white;
@@ -103,6 +100,15 @@ header {
   border: none;
   padding-right: 0;
   font-size: 0.95rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-nav__light--dropdown-btn:hover svg {
+  fill: var(--nav-main-light-icon-hover);
+}
+
+.header-nav__light--dropdown-btn:hover div.header-nav__light--triangle {
+  border-bottom-color: var(--nav-main-light-hover);
 }
 
 .header-nav__light--triangle {

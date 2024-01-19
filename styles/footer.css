@@ -71,7 +71,9 @@ div.footer__main {
     display: inline-block;
   }
   & svg {
-    margin-right: 8px;
+    margin-right: 7px;
+    height: 25px;
+    width: 25px;
     fill: var(--footer-icons-background-color);
     background-color: white;
     z-index: -1;
@@ -81,6 +83,11 @@ div.footer__main {
       fill: var(--footer-icons-background-color);
     }
   }
+}
+
+.footer__social-link--wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .footer__social-link:hover div {
@@ -140,7 +147,7 @@ div.footer__main {
   }
 
   .footer__main-content {
-    grid-template-columns: repeat(3, 1fr) clamp(295px, 40vw, 400px);
+    grid-template-columns: repeat(3, 1fr) clamp(345px, 45vw, 450px);
   }
 
   .footer__legal-content {
