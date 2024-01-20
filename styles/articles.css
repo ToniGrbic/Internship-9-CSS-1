@@ -45,6 +45,10 @@ section {
   padding: 0;
 }
 
+.article-feed__featured {
+  position: relative;
+}
+
 .article-header__view-all {
   display: flex;
   align-items: center;
@@ -112,7 +116,7 @@ section {
   height: 147px;
   padding: 15px 20px 0 0;
   position: absolute;
-  bottom: -525px;
+  bottom: -6px;
   z-index: 15;
   background-color: white;
 }
@@ -218,7 +222,7 @@ hr {
 
   .article-feed-two-column__card-teaser {
     width: 530px;
-    bottom: -446px;
+    bottom: 30px;
   }
 
   .article-feed-two-column__card-byline {
