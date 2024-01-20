@@ -81,10 +81,6 @@ section {
     color: var(--article-header-nav-links-hover-color);
   }
 }
-.article-feed__featured {
-  width: 922px;
-  height: 615px;
-}
 
 .article-feed__main-img {
   width: 100%;
@@ -98,11 +94,22 @@ section {
   height: 615px;
   z-index: 5;
   background-color: transparent;
-  /* FIX: background color not changing on hover */
+
   & :hover {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
   }
+}
+
+.article-feed-main-img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease;
 }
 
 .article-feed--two-column {
